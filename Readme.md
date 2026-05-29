@@ -10,7 +10,7 @@ En ambos casos, veremos cómo el **ViewModel** toma el control y deja al **Code-
 
 A continuación, vamos a dar el paso a paso desde la creación del proyecto hasta la ejecución de la aplicación con **Visual Studio 2022**.
 
-Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./Code/WinUI3Increaser_1.zip).
+Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./docs/Code/WinUI3Increaser_1.zip).
 
 El decálogo de tareas es el siguiente:
 
@@ -498,7 +498,7 @@ Ahora adaptamos el XAML para navegar a través del `MainViewModel` usando rutas 
 
     <Grid Padding="40">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="30">
-      
+    
             <!-- SECCIÓN DEL TEMPORIZADOR (TimerVM) -->
             <StackPanel Spacing="5">
                 <TextBlock Text="Tiempo Restante" HorizontalAlignment="Center" Foreground="Gray"/>
@@ -526,7 +526,7 @@ Ahora adaptamos el XAML para navegar a través del `MainViewModel` usando rutas 
                         Width="120"
                         Style="{ThemeResource AccentButtonStyle}"/>
             </StackPanel>
-      
+    
         </StackPanel>
     </Grid>
 </Window>
