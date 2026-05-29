@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinUI3Increaser (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUI3Increaser (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
