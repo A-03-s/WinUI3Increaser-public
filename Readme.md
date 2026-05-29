@@ -94,7 +94,7 @@ En WinUI 3, usamos `{x:Bind}` para conectar la interfaz con el ViewModel. Es rá
 		            Command="{x:Bind ViewModel.IncrementarCommand}" 
 	                HorizontalAlignment="Center" />
         </StackPanel>
-    
+  
     </Grid>
 </Window>
 ```
@@ -151,9 +151,9 @@ Como comentamos en los párrafos iniciales de este documento, la primera impleme
 
 Es común que en los ejemplos sencillos se suela fusionar el "Model" dentro del "ViewModel" para ahorrar líneas, pero en aplicaciones reales esa "simplificación" rompe el principio de responsabilidad única. Separar el modelo nos permitirá escalar la lógica de negocio de forma independiente a la interfaz de usuario.
 
-Aquí mostraremos el código de la misma aplicación reestructurado de manera estricta, manteniendo la magia de los _Source Generators_ de la [Community Toolkit de MVVM](./dotnet-communitytoolkit-mvvm.pdf).
+Aquí mostraremos el código de la misma aplicación reestructurado de manera estricta, manteniendo la magia de los _Source Generators_ de la [Community Toolkit de MVVM](./docs/dotnet-communitytoolkit-mvvm.pdf).
 
-Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./Code/WinUI3Increaser_2.zip).
+Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./docs/Code/WinUI3Increaser_2.zip).
 
 ### 2.1. El Model - Models/IncreaserModel.cs
 
@@ -286,7 +286,7 @@ namespace WinUI3Increaser
 
 ### 2.5. Porqué la clase "IncreaserModel" es un objeto POCO
 
-Como dijimos en el documento que describe las características básicas del patrón MVVM, las clases que componen el modelo suelen ser objetos [POCO](./POCO.md) (Plain Old CLR Object).
+Como dijimos en el documento que describe las características básicas del patrón MVVM, las clases que componen el modelo suelen ser objetos [POCO](./docs/POCO.md) (Plain Old CLR Object).
 
  La clase "IncreaserModel" entra perfectamente en la categoría de un **objeto POCO**.
 
@@ -325,7 +325,7 @@ Al separar el temporizador (Timer) del contador de clics (Increaser) en diferent
 
 Para estructurar esto de forma limpia en WinUI 3, usaremos un **ViewModel principal** (o global) que orqueste y contenga a los sub-ViewModels. De este modo, la vista principal (`MainWindow`) solo tiene que conocer a ese ViewModel padre.
 
-Aquí tienes el código completo y estructurado para expandir tu aplicación. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./Code/WinUI3TimerClick_3.zip).
+Aquí tienes el código completo y estructurado para expandir tu aplicación. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./docs/Code/WinUI3TimerClick_3.zip).
 
 ### 3.1. Los Models
 
@@ -498,7 +498,7 @@ Ahora adaptamos el XAML para navegar a través del `MainViewModel` usando rutas 
 
     <Grid Padding="40">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="30">
-        
+      
             <!-- SECCIÓN DEL TEMPORIZADOR (TimerVM) -->
             <StackPanel Spacing="5">
                 <TextBlock Text="Tiempo Restante" HorizontalAlignment="Center" Foreground="Gray"/>
@@ -526,7 +526,7 @@ Ahora adaptamos el XAML para navegar a través del `MainViewModel` usando rutas 
                         Width="120"
                         Style="{ThemeResource AccentButtonStyle}"/>
             </StackPanel>
-        
+      
         </StackPanel>
     </Grid>
 </Window>
@@ -581,9 +581,9 @@ En el ejemplo que venimos desarrollando, seguramente has podido experimentar que
 
 Entonces, para ejemplificar la implementación de un módulo "helper" se nos ocurrió utilizarlo para inicializar el tamaño de la ventana principal, de tal manera que su ancho y alto sean proporcionales al tamaño de los controles que tiene incluidos.
 
-La idea es desarrollar un Helper aplicando el modelo "Attached behavior" para diseñarlo, creando  una class "Extensions" y otra class "Helper".  Si deseas conocer o repasar en qué consiste la técnica "**Attached Behavior**" puedes consultar el siguiente documento: [Attached Behavior](./AttachedBehavior.md).
+La idea es desarrollar un Helper aplicando el modelo "Attached behavior" para diseñarlo, creando  una class "Extensions" y otra class "Helper".  Si deseas conocer o repasar en qué consiste la técnica "**Attached Behavior**" puedes consultar el siguiente documento: [Attached Behavior](./docs/AttachedBehavior.md).
 
-Sólo mostraremos los nuevos archivos o los fuentes que cambian respecto al ejemplo del punto anterior. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./Code/WinUI3TimerClick_4.zip).
+Sólo mostraremos los nuevos archivos o los fuentes que cambian respecto al ejemplo del punto anterior. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./docs/Code/WinUI3TimerClick_4.zip).
 
 ### 4.1 El Helper
 
@@ -698,9 +698,9 @@ namespace WinUI3TimerClick.Helpers
         <StackPanel VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     Spacing="30">
-    
+  
         ...
-    
+  
         </StackPanel>
     </Grid>
 </Window>
@@ -743,7 +743,7 @@ Lo haremos sobre la base del código de la etapa anterior en la cual implementam
 
 El input del módulo será el valor booleano proveniente del estado del botón y el output el color de fondo con el que queremos pintar el botón. Para ser más claros, el botón "Sumar 1" tendrá el color clásico de un botón de Windows cuando esté habilitado, es decir, mientras el timer tenga un valor distinto de cero y el color rojo cuando pase a deshabilitado, o sea, cuando el timer haya terminado.
 
-Como venimos haciendo a medida que avanzamos en los ejemplos, sólo mostraremos los nuevos archivos o los fuentes que cambian respecto al ejemplo del punto anterior. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./Code/WinUI3TimerClick_5.zip).
+Como venimos haciendo a medida que avanzamos en los ejemplos, sólo mostraremos los nuevos archivos o los fuentes que cambian respecto al ejemplo del punto anterior. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./docs/Code/WinUI3TimerClick_5.zip).
 
 ### 5.1. El Converter
 
@@ -842,7 +842,7 @@ Su función principal es **transformar un tipo de dato lógico en un tipo de dat
 
 Luego de crear el módulo "Converter" tenemos que armar el enlace de datos en XAML.
 
-Inicialmente, lo más intuitivo sería establecer un enlace entre el "Background" del `<Button>` y su propio estado disponible en el atributo "IsEnabled". Pero esto no funciona, o por lo menos no lo hace de manera directa. Más abajo describimos el [porqué](#porque-no-funciona-un-enlace-entre-el-background-y-el-isenabled).
+Inicialmente, lo más intuitivo sería establecer un enlace entre el "Background" del `<Button>` y su propio estado disponible en el atributo "IsEnabled". Pero esto no funciona, o por lo menos no lo hace de manera directa. Más abajo describimos el [porqué](#porqué-no-funciona-un-enlace-entre-el-background-y-el-isenabled).
 
 Una alternativa es poner el Background del botón a "Transparent" y declarar un `<Border>` como "contenedor" del `<Button>`. De esta manera, sí funciona un binding entre el "Background" del `<Border>` y el "IsEnabled" del `<Button>`, pero tiene algunas desventajas que también explicamos más abajo.
 
@@ -872,7 +872,7 @@ Una alternativa es poner el Background del botón a "Transparent" y declarar un 
         <Grid.Resources>
             <converters:EnabledToColorConverter x:Key="ColorConverter" />
         </Grid.Resources>
-    
+  
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="30">
 
             <!-- SECCIÓN DEL TEMPORIZADOR (TimerVM) -->
