@@ -16,13 +16,14 @@
     <Grid>
 
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="{x:Bind ViewModel.Valor, Mode=OneWay}" 
-               FontSize="48" 
-               HorizontalAlignment="Center" />
+            <!-- Ahora bindeamos a ValorUI -->
+            <TextBlock Text="{x:Bind ViewModel.ValorUI, Mode=OneWay}"
+                FontSize="48" 
+                HorizontalAlignment="Center" />
 
             <Button Content="Sumar 1" 
-            Command="{x:Bind ViewModel.IncrementarCommand}" 
-            HorizontalAlignment="Center" />
+                Command="{x:Bind ViewModel.IncrementarCommand}" 
+                HorizontalAlignment="Center" />
         </StackPanel>
         
     </Grid>
