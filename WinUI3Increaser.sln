@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37203.1 d17.14
+VisualStudioVersion = 17.14.37203.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3Increaser", "WinUI3Increaser\WinUI3Increaser.csproj", "{27933334-00F4-4D42-BEA0-F18111CFB2AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI3TimerClick", "WinUI3TimerClick\WinUI3TimerClick.csproj", "{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,24 @@ Global
 		{27933334-00F4-4D42-BEA0-F18111CFB2AD}.Release|x86.ActiveCfg = Release|x86
 		{27933334-00F4-4D42-BEA0-F18111CFB2AD}.Release|x86.Build.0 = Release|x86
 		{27933334-00F4-4D42-BEA0-F18111CFB2AD}.Release|x86.Deploy.0 = Release|x86
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|x64.ActiveCfg = Debug|x64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|x64.Build.0 = Debug|x64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|x64.Deploy.0 = Debug|x64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|x86.ActiveCfg = Debug|x86
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|x86.Build.0 = Debug|x86
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Debug|x86.Deploy.0 = Debug|x86
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|ARM64.Build.0 = Release|ARM64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|ARM64.Deploy.0 = Release|ARM64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|x64.ActiveCfg = Release|x64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|x64.Build.0 = Release|x64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|x64.Deploy.0 = Release|x64
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|x86.ActiveCfg = Release|x86
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|x86.Build.0 = Release|x86
+		{F1DAA2BC-C49E-08BC-AA02-8BBE4C70AE2E}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

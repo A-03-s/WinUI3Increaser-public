@@ -498,7 +498,7 @@ Ahora adaptamos el XAML para navegar a través del `MainViewModel` usando rutas 
 
     <Grid Padding="40">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="30">
-    
+  
             <!-- SECCIÓN DEL TEMPORIZADOR (TimerVM) -->
             <StackPanel Spacing="5">
                 <TextBlock Text="Tiempo Restante" HorizontalAlignment="Center" Foreground="Gray"/>
@@ -526,7 +526,7 @@ Ahora adaptamos el XAML para navegar a través del `MainViewModel` usando rutas 
                         Width="120"
                         Style="{ThemeResource AccentButtonStyle}"/>
             </StackPanel>
-    
+  
         </StackPanel>
     </Grid>
 </Window>
@@ -739,11 +739,16 @@ Los detalles del código implementado son los siguientes:
 
 Para completar la lista de módulos de una app WinUI 3 que mencionamos en los primeros apartados de este documento, nos está faltando desarrollar un "Converter".
 
-Lo haremos sobre la base del código de la etapa anterior en la cual implementamos un "Helper", y el "Converter" hará que el botón "Sumar 1" de la app deberá ponerse en color rojo cuando el timer llegue a 0.
+Lo haremos sobre la base del código de la etapa anterior en la cual implementamos un "Helper", y el "Converter" hará que el botón "Sumar 1" de la app deba ponerse en color rojo cuando el timer llegue a 0.
 
 El input del módulo será el valor booleano proveniente del estado del botón y el output el color de fondo con el que queremos pintar el botón. Para ser más claros, el botón "Sumar 1" tendrá el color clásico de un botón de Windows cuando esté habilitado, es decir, mientras el timer tenga un valor distinto de cero y el color rojo cuando pase a deshabilitado, o sea, cuando el timer haya terminado.
 
 Como venimos haciendo a medida que avanzamos en los ejemplos, sólo mostraremos los nuevos archivos o los fuentes que cambian respecto al ejemplo del punto anterior. Si deseas descargar la solución completa para VS2022 puedes hacer clic [aquí](./docs/Code/WinUI3TimerClick_5.zip).
+
+El resultado final después de esta última implementación es el siguiente:
+
+![](./docs/img/Pasted%20image%2020260530102906.png)
+
 
 ### 5.1. El Converter
 

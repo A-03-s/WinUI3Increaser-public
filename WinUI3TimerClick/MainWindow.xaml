@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="WinUI3TimerClick.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinUI3TimerClick"
+    xmlns:helpers="using:WinUI3TimerClick.Helpers"
+    xmlns:converters="using:WinUI3TimerClick.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="RootWindow"
+    Title="WinUI 3 MVVM - Multi VM Juego">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid helpers:WindowExtensions.AutoSizeToWindow="{x:Bind RootWindow}"
+          Padding="40">
+
+        <Grid.Resources>
+            <converters:EnabledToColorConverter x:Key="ColorConverter" />
+        </Grid.Resources>
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="30">
+
+            <!-- SECCIÓN DEL TEMPORIZADOR (TimerVM) -->
+            <StackPanel Spacing="5">
+                <TextBlock Text="Tiempo Restante" HorizontalAlignment="Center" Foreground="Gray"/>
+                <TextBlock x:Name="StatusLabel" 
+                           Text="{x:Bind MainVM.TimerVM.TiempoUI, Mode=OneWay}" 
+                           FontSize="64" 
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="{x:Bind MainVM.TimerVM.EstadoUI, Mode=OneWay}" 
+                           HorizontalAlignment="Center" 
+                           Foreground="LightGreen"/>
+            </StackPanel>
+
+            <MenuFlyoutSeparator />
+
+            <!-- SECCIÓN DEL CONTADOR (ContadorVM) -->
+            <StackPanel Spacing="15">
+                <TextBlock Text="{x:Bind MainVM.ContadorVM.ValorUI, Mode=OneWay}" 
+                           FontSize="48" 
+                           HorizontalAlignment="Center" />
+
+                <!-- El comando ahora se busca dentro de ContadorVM -->
+                <Border Background="{Binding IsEnabled, ElementName=IncrementButton, Mode=OneWay, Converter={StaticResource ColorConverter}, ConverterParameter='#1E90FF'}" 
+                        BorderBrush="AliceBlue"
+                        BorderThickness="0" 
+                        CornerRadius="8" 
+                        Padding="0" 
+                        HorizontalAlignment="Center">
+                    <Button x:Name="IncrementButton" 
+                        IsEnabled="{x:Bind MainVM.IsButtonEnabled, Mode=OneWay}"
+                        Content="Sumar 1" 
+                        Command="{x:Bind MainVM.ContadorVM.IncrementarCommand}" 
+                        HorizontalAlignment="Center"
+                        Width="120"
+                        Style="{ThemeResource AccentButtonStyle}"
+                        Background="Transparent"
+                        />
+                </Border>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
